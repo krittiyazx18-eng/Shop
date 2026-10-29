@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NEXPLAY — Game Store</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app" data-sites-preview-theme="custom">
+<header><div class="wrap nav">
+  <a href="#top" class="brand" style="text-decoration:none"><span class="brand-mark">N</span><span>NEXPLAY</span></a>
+  <nav class="navlinks"><a class="active" href="#store">STORE</a><a href="#discover">DISCOVER</a><a href="#deals">DEALS</a></nav>
+  <div class="nav-spacer"></div>
+  <label class="search"><span class="glass">⌕</span><input id="searchInput" type="search" placeholder="ค้นหาเกม..." aria-label="ค้นหาเกม"></label>
+  <button class="login-btn" id="loginOpen">เข้าสู่ระบบ</button>
+  <button class="icon-btn" id="wishlistOpen" aria-label="รายการเกมที่อยากได้">♡<span class="count" id="wishCount">0</span></button>
+  <button class="icon-btn" id="cartOpen" aria-label="ตะกร้าสินค้า">♧<span class="count" id="cartCount">0</span></button>
+</div></header>
+<main class="wrap" id="top">
+<section class="hero" id="discover"><div class="hero-grid">
+  <div class="hero-copy"><div class="eyebrow"><span class="pulse"></span> YOUR NEXT ADVENTURE STARTS HERE</div>
+    <h1>PLAY MORE.<br><em>FEEL EVERYTHING.</em></h1>
+    <p>พื้นที่ของคนรักเกม ค้นพบเกมใหม่ เกมอินดี้สุดเจ๋ง และดีลที่ใช่สำหรับคุณ ทั้งหมดในที่เดียว</p>
+    <div><button class="btn-primary" onclick="document.getElementById('store').scrollIntoView({behavior:'smooth'})">สำรวจเกมทั้งหมด ↗</button><button class="btn-ghost" onclick="showToast('นี่คือตัวอย่างหน้าร้านค้า NEXPLAY')">เกี่ยวกับเรา</button></div>
+    <div class="hero-meta"><div><b>1,200+</b>เกมให้ค้นพบ</div><div><b>INDIE ♥ AAA</b>ทุกแนวที่ชอบ</div><div><b>YOUR PLAYLIST</b>สไตล์ของคุณ</div></div>
+  </div>
+  <div class="hero-art"><div class="orbit"></div><div class="hero-game-art">
+    <svg viewBox="0 0 440 390" role="img" aria-label="ภาพอาร์ตเกมไซไฟต้นฉบับ"><defs><linearGradient id="blade" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a9fbff"/><stop offset=".45" stop-color="#7c6dff"/><stop offset="1" stop-color="#f5a8ff"/></linearGradient><linearGradient id="armor" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#b8c8ff"/><stop offset=".5" stop-color="#555b96"/><stop offset="1" stop-color="#20243e"/></linearGradient><radialGradient id="planet"><stop stop-color="#edbaff"/><stop offset=".6" stop-color="#7e55d9"/><stop offset="1" stop-color="#24214f"/></radialGradient></defs>
+    <circle cx="293" cy="113" r="68" fill="url(#planet)" opacity=".92"/><ellipse cx="293" cy="118" rx="103" ry="20" fill="none" stroke="#a9d9ff" stroke-width="5" opacity=".45" transform="rotate(-22 293 118)"/>
+    <path d="M40 310 L130 255 155 270 91 338Z" fill="#2d477a" opacity=".7"/><path d="M322 220 L390 266 355 280 307 251Z" fill="#604ba8" opacity=".8"/>
+    <path d="M177 90 L210 35 228 106 256 145 228 171 188 142Z" fill="url(#blade)" opacity=".85"/><path d="M185 142 L137 207 160 281 210 315 264 280 278 203 235 153Z" fill="url(#armor)" stroke="#d6d9ff" stroke-width="2"/><path d="M187 150 L211 174 236 150 250 207 212 239 174 206Z" fill="#242b50"/><path d="M185 154 L210 180 235 154 227 203 210 216 193 202Z" fill="#77f2ff" opacity=".85"/>
+    <path d="M145 204 L105 249 124 278 166 246Z" fill="#606ba6" stroke="#b6c5ff" stroke-width="2"/><path d="M266 205 L309 235 289 268 253 244Z" fill="#555d99" stroke="#b6c5ff" stroke-width="2"/><path d="M168 274 L151 326 180 350 207 315Z" fill="#343b67" stroke="#9ba8ec" stroke-width="2"/><path d="M256 274 L277 323 250 350 218 315Z" fill="#343b67" stroke="#9ba8ec" stroke-width="2"/>
+    <path d="M209 169 L201 88 212 61 223 103 222 173Z" fill="url(#blade)"/><path d="M164 235 L207 254 257 230 246 271 210 292 173 270Z" fill="#181e36" stroke="#8998db" stroke-width="2"/><path d="M208 255 L215 282 204 294 197 276Z" fill="#75f4ff"/>
+    <g fill="#e8e4ff" opacity=".8"><circle cx="87" cy="96" r="2"/><circle cx="118" cy="48" r="1.5"/><circle cx="347" cy="51" r="2"/><circle cx="370" cy="164" r="1.5"/><circle cx="88" cy="183" r="1.5"/><circle cx="332" cy="315" r="2"/></g>
+    </svg></div><div class="hero-chip"><span style="color:#9ca7c2">FEATURED UNIVERSE</span><strong>BEYOND THE VOID <span style="color:#a996ff">✦</span></strong></div></div>
+</div></section>
+<div class="feature-strip">
+  <div class="feature"><div class="feature-icon">✦</div><div><strong>เกมที่ใช่สำหรับคุณ</strong><small>ค้นพบเกมใหม่จากหลากหลายแนว</small></div></div>
+  <div class="feature"><div class="feature-icon">↯</div><div><strong>ดีลคุ้มทุกสัปดาห์</strong><small>รวมเกมลดราคาไว้ให้แล้ว</small></div></div>
+  <div class="feature"><div class="feature-icon">♡</div><div><strong>จัดลิสต์เกมโปรด</strong><small>บันทึกเกมที่อยากเล่นได้ง่าย ๆ</small></div></div>
+</div>
+<section class="section" id="store">
+  <div class="section-head"><div><div class="section-kicker">THE COLLECTION</div><h2>ค้นพบเกมใหม่ <span style="color:#a995ff">✳</span></h2><div class="section-sub">เลือกเกมที่ใช่ แล้วออกไปสร้างเรื่องราวของคุณ</div></div><span style="font-size:10px;color:#7e879d" id="resultCount">เกมทั้งหมด</span></div>
+  <div class="filters" id="filters"><button class="filter selected" data-filter="ทั้งหมด">ทั้งหมด</button><button class="filter" data-filter="Action">Action</button><button class="filter" data-filter="Adventure">Adventure</button><button class="filter" data-filter="RPG">RPG</button><button class="filter" data-filter="Racing">Racing</button><select class="sort-select" id="sortSelect" aria-label="เรียงลำดับ"><option value="featured">แนะนำ</option><option value="low">ราคาต่ำไปสูง</option><option value="high">ราคาสูงไปต่ำ</option><option value="discount">ส่วนลดมากสุด</option></select></div>
+  <div class="game-grid" id="gameGrid" style="margin-top:18px"></div>
+</section>
+<section class="promo" id="deals"><div><div class="section-kicker" style="color:#62ddeb">NEXPLAY WEEKLY DROP</div><h3>เกมดี ไม่จำเป็นต้องราคาแรง</h3><p>แวะมาดูเกมลดราคา แล้วเติมเกมโปรดลงในคอลเลกชันของคุณ</p></div><button class="btn-primary" onclick="document.getElementById('filters').querySelector('[data-filter=\'ทั้งหมด\']').click();document.getElementById('store').scrollIntoView({behavior:'smooth'})">ดูดีลทั้งหมด ↗</button></section>
+</main>
+<footer><div class="wrap footer-row"><div><div class="brand" style="font-size:14px;margin-bottom:8px"><span class="brand-mark" style="width:25px;height:25px;border-radius:8px;font-size:14px">N</span><span>NEXPLAY</span></div><span>© 2026 NEXPLAY. PLAY YOUR WAY.</span></div><div class="footer-links"><a href="#store">ร้านค้า</a><a href="#discover">ค้นพบ</a><a href="#deals">โปรโมชั่น</a><a href="#top" onclick="showToast('NEXPLAY — Demo Store')">เกี่ยวกับ</a></div></div></footer>
+<div class="modal-backdrop" id="modalBackdrop"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-head"><h3 id="modalTitle">ตะกร้าของคุณ</h3><button class="close" id="modalClose" aria-label="ปิด">✕</button></div><div id="modalBody"></div></div></div>
+<div class="toast" id="toast"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
